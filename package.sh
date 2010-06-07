@@ -8,7 +8,12 @@ if [ `which "$UNITY_BIN"` == "" ]; then
   exit 1
 fi
 
-echo "Building a .unitypackage of the library itself."
-"$UNITY_BIN" -batchmode -quit -executeMethod ExportPackage.ExportLibrary -projectPath .
-echo "Building a .unitypackage of the whole example project, including the library."
-"$UNITY_BIN" -batchmode -quit -executeMethod ExportPackage.ExportProject -projectPath .
+echo "Building library package..."
+"$UNITY_BIN" -batchmode -executeMethod ExportPackage.ExportLibraryPackage -projectPath "`pwd`"
+echo "Building example project package..."
+"$UNITY_BIN" -batchmode -executeMethod ExportPackage.ExportExampleProjectPackage -projectPath "`pwd`"
+
+if [ -d "Temp/" ]; then
+  rm -rf Temp/
+fi
+
