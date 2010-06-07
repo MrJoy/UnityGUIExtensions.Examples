@@ -8,10 +8,28 @@ if [ `which "$UNITY_BIN"` == "" ]; then
   exit 1
 fi
 
+DATESTAMP=`date +%Y%m%d`
 echo "Building library package..."
 "$UNITY_BIN" -batchmode -executeMethod ExportPackage.ExportLibraryPackage -projectPath "`pwd`"
+PKG=UnityGUIExtensions.unitypackage
+if [ -e $PKG ]; then 
+  PKGDIR=${PKG%.unitypackage}_$DATESTAMP
+  mkdir $PKGDIR
+  mv $PKG $PKGDIR
+  zip -9 $PKGDIR.zip $PKGDIR/$PKG
+  rm -rf $PKGDIR
+fi
+
 echo "Building example project package..."
 "$UNITY_BIN" -batchmode -executeMethod ExportPackage.ExportExampleProjectPackage -projectPath "`pwd`"
+PKG=UnityGUIExtensions_Examples.unitypackage
+if [ -e $PKG ]; then 
+  PKGDIR=${PKG%.unitypackage}_$DATESTAMP
+  mkdir $PKGDIR
+  mv $PKG $PKGDIR
+  zip -9 $PKGDIR.zip $PKGDIR/$PKG
+  rm -rf $PKGDIR
+fi
 
 if [ -d "Temp/" ]; then
   rm -rf Temp/
