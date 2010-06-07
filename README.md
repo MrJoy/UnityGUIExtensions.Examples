@@ -12,14 +12,22 @@ See the UnityGUIExtensions project for more details:
 * Unity 2.6.0.  This is unlikely to work with Unity/iPhone, without at least 
 considerable modification.
 
-* [If cloning project from GitHub]  git.  The UnityGUIExtensions library is 
-included via git submodule.  This is NOT needed if you get a .unitypackage of 
-this project.
+* Git [ONLY if cloning from GitHUb].  The UnityGUIExtensions library is included
+via Git submodule.  This is NOT needed if you get a .unitypackage of this
+project.
 
 
 ## Install ##################################################################
 
-Check this project out, and go.
+If you're downloading a .unitypackage, just install it into a project and go.
+
+If you're grabbing this project from git, you'll need to set up submodules 
+first.  From the project directory, in terminal, type:
+
+    git submodule init
+    git submodule update
+
+Voila!  Done!
 
 
 ## Source ###################################################################
