@@ -1,0 +1,3 @@
+[submodule "Assets/UnityGUIExtensions"]
+	path = Assets/UnityGUIExtensions
+	url = git://github.com/MrJoy/UnityGUIExtensions.git

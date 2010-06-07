@@ -1,0 +1,34 @@
+# Mac cruft.
+.DS_Store
+
+# Unity gubbins.
+Library/AssetServerCacheV3
+Library/assetservercachev3
+Library/FailedAssetImports.txt
+Library/ScriptAssemblies
+Library/scriptassemblies
+Library/ScriptMapper
+Library/scriptmapper
+Library/Temp
+Library/assetDatabase3
+Library/cache
+Library/guidmapper
+Library/metadata
+Library/expandedItems
+Library/InspectorExpandedItems.asset
+Library/unity\ default\ resources
+Library/unity\ editor\ resources
+Temp/
+
+# MonoDevelop IDE leavings...
+*.pidb
+*.pidb.meta
+*.userprefs
+*.userprefs.meta
+
+# Debugging symbols...
+*.pdb
+*.pdb.meta
+*.mdb
+*.mdb.meta
+
