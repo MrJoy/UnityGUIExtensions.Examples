@@ -9,11 +9,11 @@ public class AutoSelectExample : MonoBehaviour {
     GUILayout.BeginArea(new Rect(0, 0, 400, 200));
       GUILayout.BeginHorizontal();
         GUILayout.Label("Auto-selecting text field:", GUILayout.Width(140));
-        a = GUILayoutExt.AutoSelectTextArea("fieldA", a);
+        a = GUILayoutAutoSelect.TextArea("fieldA", a);
       GUILayout.EndHorizontal();
       GUILayout.BeginHorizontal();
         GUILayout.Label("Auto-selecting text field:", GUILayout.Width(140));
-        b = GUILayoutExt.AutoSelectTextArea("fieldB", b);
+        b = GUILayoutAutoSelect.TextArea("fieldB", b);
       GUILayout.EndHorizontal();
       GUILayout.BeginHorizontal();
         GUILayout.Label("Plain text field:", GUILayout.Width(140));
