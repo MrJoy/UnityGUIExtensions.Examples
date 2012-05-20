@@ -3,7 +3,7 @@ using System;
 using System.Collections;
 
 public class AutoSelectExample : MonoBehaviour {
-  private string a = "", b = "", c = "";
+  private string a = "Should auto-select.", b = "Should also auto-select.", c = "Should NOT auto-select.";
 
   public void OnGUI() {
     GUILayout.BeginArea(new Rect(0, 0, 400, 200));
