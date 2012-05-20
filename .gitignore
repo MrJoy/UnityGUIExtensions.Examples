@@ -5,6 +5,7 @@
 Library/*
 !Library/*.asset
 Library/InspectorExpandedItems.asset
+Library/EditorUserSettings.asset
 Library/EditorUserBuildSettings.asset
 Library/MonoManager.asset
 Temp/
